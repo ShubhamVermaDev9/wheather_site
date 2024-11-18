@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/clear.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="heading">
+      <p>Weather App  <i class="fa-solid fa-cloud-sun-rain"></i></p>
+    </div>
+    <div class="card">
+      <h3 class="check">check the weather  <i class="fa-brands fa-cloudversify"></i></h3>
+      <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <button><img src="img/search.png" alt="" /></button>
+      </div>
+      <div class="error">
+        <p>Invalid city name.</p>
+      </div>
+      <div class="weather">
+        <img src="img/rain.png" class="weather-icon" alt="" />
+        <h1 class="temp">22*C</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+          <div class="col">
+            <img src="img/humidity.png" alt="" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="img/wind.png" alt="" />
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+    <script>
+      VANTA.CLOUDS({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        skyColor: 0x5b8a9d,
+        cloudColor: 0x337c93,
+        cloudShadowColor: 0x195184,
+        sunlightColor: 0x6e6358,
+        speed: 0.20
+      })
+      </script>
+  </body>
+</html>
